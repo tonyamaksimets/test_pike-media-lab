@@ -1,0 +1,29 @@
+.films__list {
+  @include list-style-reset;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.films__item {
+  position: relative;
+  top: 0;
+
+  margin-bottom: 24px;
+
+  transition-property: box-shadow, top;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+
+  box-shadow: 0 4px 4px rgba($shadow-color, 0.25);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    top: -8px;
+
+    box-shadow: 0 8px 20px rgba($shadow-color, 0.35);
+  }
+}

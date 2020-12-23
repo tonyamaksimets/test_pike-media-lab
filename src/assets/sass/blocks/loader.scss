@@ -1,0 +1,15 @@
+.loader {
+  padding-top: 248px;
+
+  text-align: center;
+}
+
+.loader__image {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

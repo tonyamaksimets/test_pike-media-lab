@@ -1,0 +1,10 @@
+.error-message {
+  @include paragraph-style-reset;
+
+  margin-top: 48px;
+
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+}
+

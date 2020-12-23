@@ -1,0 +1,162 @@
+.film {
+  position: relative;
+
+  display: flex;
+  min-height: 168px;
+}
+
+.film__poster-block {
+  position: relative;
+
+  width: 168px;
+  flex-shrink: 0;
+
+  background-color: $lightest-background-color;
+}
+
+.film__poster {
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  transform: translateY(-50%);
+}
+
+.film__text-block {
+  flex-grow: 1;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  background-color: $light-background-color;
+
+  & :last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 80px;
+  }
+}
+
+.film__name {
+  @include title-style-reset;
+
+  margin-bottom: 12px;
+  max-width: calc(100% - 184px);
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.film__link {
+  @include link-style-reset;
+
+  &:hover,
+  &:focus {
+    color: $light-text-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.film__main-info {
+  @include paragraph-style-reset;
+
+  margin-bottom: 8px;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: $basic-text-color;
+}
+
+.film__director {
+  @include paragraph-style-reset;
+
+  margin-bottom: 10px;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: $basic-text-color;
+}
+
+.film__actors {
+  @include paragraph-style-reset;
+
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 16px;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: $basic-text-color;
+}
+
+.film__actors-names {
+  margin-left: 10px;
+
+  font-weight: normal;
+  line-height: 16px;
+  text-transform: none;
+  color: $light-text-color;
+}
+
+.film__description {
+  @include paragraph-style-reset;
+}
+
+.film__duration {
+  @include paragraph-style-reset;
+
+  position: absolute;
+  right: 0;
+  top: 32px;
+
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 24px;
+  height: 30px;
+  width: 174px;
+  box-sizing: border-box;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: right;
+  text-transform: uppercase;
+  color: $darkest-text-color;
+
+  background-color: $lightest-background-color;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: -10px;
+    top: 0;
+
+    display: block;
+    width: 10px;
+    height: 100%;
+
+    background-image: linear-gradient(to right bottom, transparent 50%, $lightest-background-color 50%);
+  }
+
+
+  &::after {
+    content: url("../img/film.svg");
+
+    padding-left: 8px;
+
+    vertical-align: middle;
+  }
+}

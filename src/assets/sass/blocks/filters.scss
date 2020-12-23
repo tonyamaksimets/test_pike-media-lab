@@ -1,0 +1,55 @@
+.filters {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.filters__list {
+  @include list-style-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters__item {
+  margin-right: 32px;
+
+  color: $dark-text-color;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.filters__button {
+  @include button-style-reset;
+
+  &:hover,
+  &:focus {
+    color: $light-text-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    margin-bottom: -2px;
+    margin-right: 10.5px;
+    height: 15px;
+    width: 15px;
+    box-sizing: border-box;
+
+    border: 1px solid $border-color;
+  }
+
+  &--active::before {
+    background-color: $light-accent-color;
+    background-image: url("../img/tick.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+  }
+}
